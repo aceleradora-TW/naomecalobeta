@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="jumbotron">
+    <h2 class='text-center'>Busque um local para ele aparecer no mapa! :)</h2>
+    <div class='row spacer'>
+      <div class="col-lg-6 col-lg-offset-3">
+        <%= form_tag'/pesquisar', :id => 'form-pesquisa' do %>
+        <div class="input-group">
+          <%= text_field_tag 'query', nil, placeholder: 'Pesquise um local...', class: 'form-control textField' %>
+          <span class="input-group-btn">
+            <%= submit_tag "Pesquisar", class: "btn btn-primary blockBtn" %>
+          </span>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
