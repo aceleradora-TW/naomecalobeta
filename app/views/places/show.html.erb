@@ -1,19 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @place.name %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @place.address %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @place.rating %>
-</p>
-
-<%= link_to 'Edit', edit_place_path(@place) %> |
-<%= link_to 'Back', places_path %>
+<div class='container'>
+  <div class='well'>
+    <div class='row'>
+      <h1 class='text-center'><%= @place.name %></h1>
+    </div>
+    <div class='row info-teste spacer'>
+      <strong>Endereço:</strong>
+      <span> <%= @place.address %> </span>
+    </div>
+    <div class='row info-teste'>
+      <strong>Nota média: </strong>
+      <span> <%= @place.rating %> </span>
+    </div>
+    <div class='row info-teste'>
+      <strong>Relatos: </strong>
+      <textarea class="form-control" rows="3" id="comment" style="resize:none" readonly="readonly">Sou o ruas e fui abusado por meninas fogosas nesse local. Nunca mais volto.</textarea>
+    </div>
+  </div>
+</div>

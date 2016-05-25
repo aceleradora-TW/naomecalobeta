@@ -1,5 +1,5 @@
-<h1>New Place</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', places_path %>
+<div class='container'>
+  <%= form_for(@place) do |f| %>
+  <%= render 'places/form', f:f %>
+  <% end %>
+</div>

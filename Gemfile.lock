@@ -178,7 +178,6 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  coffee-rails (~> 4.1.0)
   gmaps4rails
   google_places
   jbuilder (~> 2.0)
@@ -195,4 +194,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.12.1
+   1.12.3

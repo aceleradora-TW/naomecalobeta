@@ -1,29 +1,33 @@
-<%= form_for(@place) do |f| %>
-  <% if @place.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h2>
-
-      <ul>
-      <% @place.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class='row'>
+      <div class='col-lg-6 col-lg-offset-3 form-group text-center'>
+        <label class='control-label'> Nome do Local: </label>
+        <%= f.text_field :name, :class => "form-control text-center", readonly: true %>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <div class='row'>
+      <div class='col-lg-6 col-lg-offset-3 form-group text-center'>
+        <label class='control-label'> Endereço do Local: </label>
+        <%= f.text_field :address, :class => "form-control text-center", readonly: true %>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-lg-6 col-lg-offset-3 form-group text-center'>
+        <label class='control-label'> Nota Total: </label>
+          <div class='row'>
+            <label class='radio-inline'>1<%= f.radio_button :rating, '1', :class => "teste" %></label>
+            <label class='radio-inline'>2<%= f.radio_button :rating, '2', :class => "teste" %></label>
+            <label class='radio-inline'>3<%= f.radio_button :rating, '3', :class => "teste" %></label>
+            <label class='radio-inline'>4<%= f.radio_button :rating, '4', :class => "teste" %></label>
+            <label class='radio-inline'>5<%= f.radio_button :rating, '5', :class => "teste" %></label>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
+  <div class='row'>
+    <div class='col-lg-2 col-lg-offset-7 form-group text-center spacer'>
+      <%= f.submit "Enviar Nota", :class=> "form-control btn btn-primary" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :rating %><br>
-    <%= f.text_field :rating %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
